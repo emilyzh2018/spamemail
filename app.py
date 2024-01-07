@@ -42,7 +42,7 @@ def predict():
     prediction = classifier.predict(ovect)
     print (prediction[0])
     response = jsonify(int(prediction[0]))
-    #response= jsonify({"pee":"pee runs"})
+
     response
     return response
 
