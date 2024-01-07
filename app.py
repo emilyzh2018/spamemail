@@ -5,7 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 from flask_cors import CORS, cross_origin
 from flask import Response
 from flask.helpers import send_from_directory
-app = Flask(__name__,static_folder='sp/build',static_url_path='')
+app = Flask(__name__,static_url_path='')
 CORS(app,origins='*')
 
 
@@ -41,10 +41,10 @@ def predict():
     response
     return response
 
-@app.route('/',methods = ['GET'])
+@app.route('/')
 @cross_origin()
-def serve():
-    return send_from_directory(app.static_folder,'index.html')
+def home():
+    return jsonify({"poo":"flask"})
 
 
 
