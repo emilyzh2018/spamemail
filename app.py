@@ -35,11 +35,15 @@ def predict():
     print(ovect)
     print(ovect.shape)
     #turn ovect a number from 0-1   
-    #fitted = MinMaxScaler.transform(ovect)
+  
     
-    #print(fitted)
+
+    fitted = spamclassify.scaler.transform(ovect)
+    
+  
     # Make predictions
-    prediction = classifier.predict(ovect)
+    prediction = classifier.predict(fitted)
+ 
     print (prediction[0])
     response = jsonify(int(prediction[0]))
 
