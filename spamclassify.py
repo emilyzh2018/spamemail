@@ -17,33 +17,7 @@ nltk.download('stopwords')
 nltk.download('punkt')
 df = pd.read_csv('spam email newest.csv')
 
-""" def preprocess_text(text):
-    # Lowercasing
-    text = text.lower()
 
-    # Removing punctuation
-    text = text.translate(str.maketrans("", "", string.punctuation))
-
-    # Tokenization
-
-    tokens = word_tokenize(text)
-
-    # Removing stop words
-    stop_words = set(stopwords.words('english'))
-    tokens = [word for word in tokens if word not in stop_words]
-
-    # Stemming (you can also consider lemmatization)
-    stemmer = PorterStemmer()
-    tokens = [stemmer.stem(word) for word in tokens]
-
-    return tokens
- """
-
-# Example usage
-""" email_text = "Hello, this is an example email with some common stop words."
-preprocessed_tokens = preprocess_text(email_text)
-print(preprocessed_tokens)
- """
 
 
 
